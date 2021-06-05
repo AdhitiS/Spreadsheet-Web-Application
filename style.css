@@ -9,6 +9,8 @@ body,html{
     height: 30px;
     border: 1px solid;
     display: flex;
+    background-color: lightcyan;
+    height: 60px;
 }
 .menu-options{
     height: 50px;
@@ -31,6 +33,13 @@ body,html{
 .formula-bar{
     height: 30px;
     border: 1px solid blue;
+    background-color: lightblue;
+    height: 20px;
+}
+
+.main{
+    background-color: lightgreen;
+    height: calc(100vh - 80px);
 }
 .cell-container{
     background-color: springgreen;
