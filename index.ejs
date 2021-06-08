@@ -21,19 +21,33 @@
     </div>
 
     <div class="main">
-        <div class="top-left">top-left</div>
-        <div class="top-row">top-row</div>
+        <div class="top-left-box">top-left</div>
+        <div class="top-row">
+            <%for(let j=0;j < 26; j++){%>
+                <div class="cell">
+                    <%=String.fromCharCode(65+j)%>
+                </div>
+            <%}%>
+        </div>
         <div class="top-left-col">
-            <%for(let j=1;j<=100;j++){%>
+            <%for(let i=0;i < 100; i++){%>
                 <div class = "cell">
-                    <%=j%>
+                    <%=i+1%>
                 </div>
             <%}%>
 
         </div>
-        <div class="grid">grid</div>
+        <div class="grid">
+            <%for(let i=0; i < 100 ;i++){%>
+                <div class="row">
+                    <%for(let j=0; j < 26 ;j++){%>
+                        <div class="cell" contenteditable = "true" rid=<%=i%> cid=<%=j%>></div>
+                    <%}%>
+                </div>
+            <%}%>               
+        </div>
     </div>
-    <!-- <script src="render.js"></script> -->
+    <script src="render.js"></script>
 
     <!-- <div class="menu">Menu</div>
     <div class="menu-options">Menu Options</div>
