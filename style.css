@@ -4,6 +4,7 @@ body,html{
 }
 *{
     box-sizing: border-box;
+    overflow: auto;
 }
 .menu{
     height: 30px;
@@ -41,6 +42,10 @@ body,html{
     background-color: lightgreen;
     height: calc(100vh - 80px);
 }
+
+.cell{
+    border: 1px solid;
+}
 .cell-container{
     background-color: springgreen;
     height: calc(100vh - 130px);
@@ -60,8 +65,8 @@ top:0px;
 }
 .row .cell{
     border:1px solid teal;
-min-height: 25px;
-min-width:88px;
+    min-height: 25px;
+    min-width:88px;
 }
 .top-row{
     display: flex;

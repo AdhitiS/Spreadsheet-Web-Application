@@ -1,6 +1,7 @@
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const ejs = require("ejs-electron");
 
 function createWindow () {
   // Create the browser window.
@@ -12,7 +13,7 @@ function createWindow () {
     // }
   })
   // and load the index.html of the app.
-  win.loadFile('index.html').then(() => {
+  win.loadFile('index.ejs').then(() => {
       win.webContents.openDevTools();
       win.maximize();
   })
