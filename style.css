@@ -7,11 +7,10 @@ body,html{
     overflow: auto;
 }
 .menu{
-    height: 30px;
+    height: 60px;
     border: 1px solid;
     display: flex;
     background-color: lightcyan;
-    height: 60px;
 }
 .menu-options{
     height: 50px;

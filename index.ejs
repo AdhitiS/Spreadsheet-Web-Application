@@ -16,7 +16,7 @@
     </div>
 
     <div class="formula-bar">
-        <input type="text" placeholder="Enter address">
+        <input type="text" placeholder="Enter address" id="address">
         <input type="text">
     </div>
 
@@ -41,21 +41,15 @@
             <%for(let i=0; i < 100 ;i++){%>
                 <div class="row">
                     <%for(let j=0; j < 26 ;j++){%>
-                        <div class="cell" contenteditable = "true" rid=<%=i%> cid=<%=j%>></div>
+                        <div class="cell" contenteditable = "true" cid=<%=j%> rid=<%=i%>></div>
                     <%}%>
                 </div>
             <%}%>               
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="render.js"></script>
 
-    <!-- <div class="menu">Menu</div>
-    <div class="menu-options">Menu Options</div>
-    <div class="formula-bar">
-        <input type="text">
-        <input type="text"></div>
-    <div class="cell-container" id="grid-container"> Cells</div>
-    <div class="sheets">Sheets</div> -->
 </body>
 
 </html>
