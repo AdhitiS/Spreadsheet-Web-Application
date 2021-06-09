@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    let db = [];
     $(".grid .row .cell").on("click", function () {
         let clickedCell = this;
         let rid = $(clickedCell).attr("rid");
