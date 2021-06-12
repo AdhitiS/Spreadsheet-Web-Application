@@ -3,7 +3,7 @@ const $ = require("jquery")
 const fs = require("fs");
 $(document).ready(function () {
 
-//code
+
     window.db = [];
     $(".grid .row .cell").on("click", function () {
         let clickedCell = this;
