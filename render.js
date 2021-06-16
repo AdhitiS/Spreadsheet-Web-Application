@@ -34,8 +34,9 @@ $(document).ready(function () {
     $("#save").on("click", async function () {
         // dialog box new file option
         let sdg = await dialog.showSaveDialog();
+        console.log(sdg.filePath)
         let data = JSON.stringify(db);
-        fs.promises.readFile(sdg.filePath,data);
+        fs.promises.writeFile(sdg.filePath,data);
     })
 
     function getRCIDFromCell(clickedCell) {
