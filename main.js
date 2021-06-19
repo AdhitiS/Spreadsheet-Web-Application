@@ -5,6 +5,7 @@ const ejs = require("ejs-electron");
 
 function createWindow () {
   // Create the browser window.
+  //Comment
   const win = new BrowserWindow({
     width: 800,
     height: 600,
