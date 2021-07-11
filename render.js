@@ -21,8 +21,8 @@ $(document).ready(function () {
         let isEmpty = cellObject.isEmpty;
         let formula = cellObject.formula;
         let val = cellObject.val;
-        ("#formula").val(formula);
-        $(`.cell[rid=${rid}][cid=${cid}]`).text(isEmpty ? val : "");
+        $("#formula").val(formula);
+        // $(`.cell[rid=${rid}][cid=${cid}]`).text(!isEmpty ? val : "");
         
         //value change
         // let cellIdx = $(clickedCell).text();
@@ -89,8 +89,9 @@ $(document).ready(function () {
                 $(`.cell[rid=${i}][cid=${j}]`).text();
                 colsArr.push(cellObject);
             }
-           // setUI(db);
+           
             db.push(colsArr);
+            //setUI(db);
         }
         
         console.log(db);
@@ -105,7 +106,7 @@ $(document).ready(function () {
             for(let j = 0; j < cols.length; j++){
                 let val = db[i][j].val;
                 let isEmpty = db[i][j].isEmpty;
-                $(`.cell[rid=${i}][cid=${j}]`).text(isEmpty ? val : "");
+                $(`.cell[rid=${i}][cid=${j}]`).text(!isEmpty ? val : "");
             }
             
         }
