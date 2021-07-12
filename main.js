@@ -3,6 +3,10 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const ejs = require("ejs-electron");
 
+ejs.data({
+  title: "SpreadSheet Web Application"
+})
+
 function createWindow () {
   // Create the browser window.
  
@@ -17,7 +21,9 @@ function createWindow () {
   })
   // and load the index.html of the app.
   win.loadFile('index.ejs').then(() => {
-      win.webContents.openDevTools();
+      // win.webContents.openDevTools();
+      win.removeMenu();
+      win.show();
       win.maximize();
   })
 }

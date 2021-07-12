@@ -1,109 +1,189 @@
-body,html{
-    margin: 0px;
-    padding: 0px;
-}
 *{
-    box-sizing: border-box;
-    overflow: auto;
+margin:0px;
+padding:0px;
+/* ?? */
+box-sizing: border-box;
+font-family: sans-serif;
 }
+html{
+    /* window size -> html size */
+    height:100vh;
+    /* border:2px solid green; */
+}
+/************************** menu css******************/
 .menu{
-    height: 60px;
-    border: 1px solid;
+    /* border:1px solid red; */
+    /* background-color: lightblue; */
+    height:60px;
     display: flex;
-    background-color: lightcyan;
+    align-items: center;
+    background-color: lightgreen;
+
 }
-.menu-options{
-    height: 50px;
-    border: 1px solid green
+
+.file-options,.formatting,.alignment{
+   width:20%;
+   height:80%;
+   /* border:1px solid purple; */
+   border-right:1px solid gray;
 }
-.menu-row{
+.file-options{
+    flex:0.3;
+}
+.file-options{
     display: flex;
+    align-items: center;
+    justify-content:flex-start;
+
+}
+.file-options>*
+{
+    width:30%;
     text-align: center;
+    /* border:1px solid red; */
 }
- .menu-options-item{
-    display: none;;
-    width:300px
+.file-options i{
+    font-size:larger;
+    margin-bottom:0.3rem;
 }
-.menu-options-item.selected{
+.file-options .file-text{
+    font-size: smaller;
+    font-size: 60%;
+    font-weight: 600;
+}
+.formatting{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.subgroup{
+    width:40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    /* border: 1px solid; */
+}
+.subgroup>*{
+    
+    /* border: 1px solid red; */
+    height: 45%;
+}
+.font-familyContainer select{
+    width:100%
+}
+.style-options{
+    /* border:1px solid purple; */
     display: flex;
     justify-content: space-around;
+}
+.style-options>*{
+    width:25%;
+    
     
 }
 
+.font-size-container select{
+    width: 100%;
+}
+.color-container{
+    display:flex;
+    justify-content: space-around;
+}
+.font-size-container select{
+    width:90%;
+    margin-left:0.25rem;
+}
+.color-container >*{
+    width: 40%;
+    height: 100%;
+   }
+
+.alignment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alignment>*{
+width:20%;
+}
+/* *************************************Formula area starts here **************/
 .formula-bar{
-    height: 30px;
-    border: 1px solid blue;
     background-color: lightblue;
-    height: 20px;
-}
 
+    height:30px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around; 
+}
+.formula-bar input{
+    height:70%;   
+}   
+
+.address{
+    width:10%;
+}
+.formula-break{
+    max-width:3%;
+    min-height: 3%;
+}
+.formula{
+    width:83%;
+}
+.formula-bar .formula-break{
+    text-align: center;
+}
+/* main area  */
 .main{
-    background-color: lightgreen;
-    height: calc(100vh - 80px);
-    position: relative;
-    overflow: auto;
+height: calc( 100vh - 90px );
+overflow: auto;
+position: relative;
 }
-
 .cell{
-    border: 1px solid;
+    border:1px solid rgb(205, 217, 222);
+/* manually height */
+   height: 1.5rem;
+   /* width responsive */
+   width:4rem;
+   text-align: center;
 }
-.cell-container{
-    background-color: springgreen;
-    height: calc(100vh - 130px);
-    overflow: auto;
-    position: relative;
+.top-row{
+    display:flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position:absolute;
+    top: 0px;
+    left: 1.5rem;
+    background-color: teal;
+    z-index:2;
 }
-.cell-container>*{
-position: absolute;
-top:0px;
+.top-left-box{
+    position: absolute;
+    height: 1.5rem;
+    width:1.5rem;
+    background-color: teal;
+    z-index:3;
 }
-.sheets{
-    height: 20px;
-    border: 1px solid red
+.top-left-col{
+    position: absolute;
+    top:1.5rem;
+    background-color: teal;
+    z-index:2;
+}
+.top-left-col .cell{
+max-width:1.5rem;
+font-size: 80%;
 }
 .row{
     display: flex;
 }
-.row .cell{
-    border:1px solid teal;
-    min-height: 25px;
-    min-width:88px;
-}
-.top-row{
-    display: flex;
-    background-color: lightcyan;
+.grid{    
     position: absolute;
-    top: 0px;
-    left: 65px;
+    top: 1.5rem;
+    left: 1.5rem;
 }
-.left-col{
-    width: 25px;
-    background-color: lightcyan;
-    border: 1px solid teal;
-    top: 25px;
+.selected{
+    color:white;
+    background-color: black;
 }
-.top-row .cell{
-    border: 1px solid teal;
-    min-height: 25px;
-    min-width: 88px;
-    text-align: center;
-}
-.left-col .cell{
-border:1px solid cyan;
-height:25px;
-width:25px;
-}
-.top-left-col{
-    /* height: 25px; */
-    width: 65px;
-    /* border: 1px solid teal;
-    background-color: lightcyan; */
-}
-.grid{
-    position: absolute;
-    top: 42px;
-    left: 64px;
-}
-.menu-row input[type="button"].selected{
-    background-color: gray;
-}
+
